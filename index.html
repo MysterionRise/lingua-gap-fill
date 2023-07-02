@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Тест</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="instruction">
+      <h3>Инструкция</h3>
+      <br />
+      Вам будут предъявлено несколько предложений, в каждом из них пропущено
+      одно слово. Ваша задача догадаться из контекста, какое слово пропущено, и
+      выбрать его из предложенных вариантов ответов. После каждого предложения
+      оцените, пожалуйста, степень своей уверенности в правильности данного Вами
+      ответа по шкале от 1 до 7, где 1 – совсем не уверен/а, что ответ
+      правильный, 7 – полностью уверен/а, что ответ правильный.
+
+      <br />
+
+      <br />
+      <br />
+      Для выбора ответа используйте компьютерную мышь. Для перехода к следующему
+      заданию необходимо будет нажимать клавишу ДАЛЕЕ.
+      <br />
+      Время выполнения каждого задания ограничено. Старайтесь отвечать как можно
+      быстрее.
+      <br />
+      Если Вы готовы, нажмите клавишу СТАРТ.
+    </div>
+
+    <h3 id="questionText"></h3>
+    <br />
+
+    <div id="options-list" hidden>
+      <input type="radio" id="renan" name="answer" value="ренан" />
+      <label for="renan">ренан</label><br />
+
+      <input type="radio" id="baroh" name="answer" value="барох" />
+      <label for="baroh">барох</label><br />
+
+      <input type="radio" id="liroh" name="answer" value="лирох" />
+      <label for="liroh">лирох</label><br />
+
+      <input type="radio" id="fimon" name="answer" value="фимон" />
+      <label for="fimon">фимон</label><br />
+
+      <input type="radio" id="codis" name="answer" value="кодис" />
+      <label for="codis">кодис</label><br />
+
+      <input type="radio" id="gonik" name="answer" value="гоник" />
+      <label for="gonik">гоник</label><br />
+
+      <input type="radio" id="todis" name="answer" value="тодис" />
+      <label for="todis">тодис</label><br />
+
+      <input type="radio" id="pemat" name="answer" value="пемат" />
+      <label for="pemat">пемат</label><br />
+    </div>
+
+    <br />
+
+    <h3 id="certaintyQuestionText" hidden>
+      Оцените степень своей уверенности в правильности данного Вами ответа по
+      шкале от 1 до 7, где 1 – совсем не уверен_а, что ответ правильный, 7 –
+      полностью уверен_а, что ответ правильный.
+    </h3>
+
+    <div id="questionnaire" hidden>
+      <table>
+        <tr>
+          <th></th>
+          <th>1 (совсем не уверен_а)</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7 (сильно уверен_а)</th>
+        </tr>
+        <tr>
+          <td><span id="question" /></td>
+          <td><input type="radio" id="q1_1" value="1" name="q1" /></td>
+          <td><input type="radio" id="q1_2" value="1" name="q1" /></td>
+          <td><input type="radio" id="q1_3" value="1" name="q1" /></td>
+          <td><input type="radio" id="q1_4" value="1" name="q1" /></td>
+          <td><input type="radio" id="q1_5" value="1" name="q1" /></td>
+          <td><input type="radio" id="q1_6" value="1" name="q1" /></td>
+          <td><input type="radio" id="q1_7" value="1" name="q1" /></td>
+        </tr>
+      </table>
+    </div>
+
+    <button type="button" id="nextPage">Старт</button>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

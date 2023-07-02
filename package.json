@@ -1,0 +1,34 @@
+{
+  "name": "lingua-gap-fill",
+  "version": "1.0.0",
+  "description": "Desktop app to to check masked input questions for scientific experiments",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron --enable-logging .",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MysterionRise//lingua-gap-fill.git"
+  },
+  "author": "Konstantin Perikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MysterionRise/lingua-gap-fill/issues"
+  },
+  "homepage": "https://github.com/MysterionRise/lingua-gap-fill#readme",
+  "devDependencies": {
+    "electron": "^25.2.0",
+    "electron-winstaller": "^5.1.0",
+    "eslint": "^8.44.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.8.8"
+  },
+  "dependencies": {
+    "electron-packager": "^17.1.1"
+  }
+}
