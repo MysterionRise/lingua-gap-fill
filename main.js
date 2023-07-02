@@ -26,14 +26,6 @@ const createWindow = () => {
 app.whenReady().then(() => {
   const fs = require("fs");
 
-  const fileName = "results.log";
-
-  // Check if file exists before trying to delete it
-  if (fs.existsSync(fileName)) {
-    // Delete the file
-    fs.unlinkSync(fifoleName);
-  }
-
   createWindow();
 
   app.on("activate", () => {
