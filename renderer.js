@@ -61,10 +61,12 @@ nextPageBtn.onclick = () => {
     Array.from(document.querySelectorAll('input[name="answer"]:checked'))
       .length === 1;
 
-  if (currentQuestionId === 24) {
-    getResults();
+  if (currentQuestionId === 25) {
+    // getResults();
     console.log("no more questions to ask");
     document.querySelector("#questionnaire").hidden = true;
+    document.querySelector("#certaintyQuestionText").hidden = true;
+    document.querySelector("#options-list").hidden = true;
     questionText.innerText = "Спасибо за выполнение задания!";
     nextPageBtn.innerText = "Завершить тест";
   } else if (currentQuestionId === 0) {
@@ -96,8 +98,17 @@ nextPageBtn.onclick = () => {
       questionText.hidden = false;
       document.querySelector("#questionnaire").hidden = true;
 
-      questionText.innerText = questions[currentQuestionId];
-      currentQuestionId++;
+      if (currentQuestionId >= questions.length) {
+        console.log("no more questions to ask");
+        document.querySelector("#questionnaire").hidden = true;
+        document.querySelector("#certaintyQuestionText").hidden = true;
+        document.querySelector("#options-list").hidden = true;
+        questionText.innerText = "Спасибо за выполнение задания!";
+        nextPageBtn.innerText = "Завершить тест";
+      } else {
+        questionText.innerText = questions[currentQuestionId];
+        currentQuestionId++;
+      }
 
       uncheckAllRadios();
       console.log("clicked2");
